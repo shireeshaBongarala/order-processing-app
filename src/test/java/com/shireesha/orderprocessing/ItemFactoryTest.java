@@ -17,4 +17,9 @@ public class ItemFactoryTest {
     assertEquals(new Video(), ItemFactory.createItem("Video"));
   }
 
+  @Test
+  public void shouldCreateAMembershipItem() {
+    assertEquals(new Video(), ItemFactory.createItem("Membership"));
+  }
+
 }
