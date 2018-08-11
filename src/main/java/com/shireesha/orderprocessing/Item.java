@@ -23,6 +23,10 @@ class Item {
       return asList("generate packing slip",
           "generate commission payment to the agent");
     }
+    if (this.name.equals("Video")) {
+      return asList("generate packing slip",
+          "generate video certificate");
+    }
     return Collections.emptyList();
   }
 }

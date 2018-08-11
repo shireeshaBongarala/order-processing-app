@@ -22,4 +22,13 @@ public class ItemTest {
             "generate commission payment to the agent"),
         item.getActions());
   }
+
+  @Test
+  public void videoItemShouldHaveGivenSetOfActions() {
+    Item item = new Item("Video");
+    assertEquals(
+        asList("generate packing slip",
+            "generate video certificate"),
+        item.getActions());
+  }
 }
