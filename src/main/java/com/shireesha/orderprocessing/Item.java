@@ -2,7 +2,7 @@ package com.shireesha.orderprocessing;
 
 import java.util.List;
 
-public interface ItemInterface {
+public interface Item {
   List<String> getActions();
   String getDisplayName();
 }

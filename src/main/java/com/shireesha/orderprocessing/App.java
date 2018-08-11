@@ -22,7 +22,7 @@ public class App {
 
     OrderCreator orderCreator = new OrderCreator();
     Order order = orderCreator.createOrder(inputList);
-    for(ItemInterface item:order.getItems()){
+    for(Item item:order.getItems()){
       System.out.println(item.getActions());
     }
 

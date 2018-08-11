@@ -6,6 +6,6 @@ import java.util.stream.Collectors;
 class OrderProcessor {
 
   List<String> process(Order order) {
-    return order.getItems().stream().map(ItemInterface::getDisplayName).collect(Collectors.toList());
+    return order.getItems().stream().map(Item::getDisplayName).collect(Collectors.toList());
   }
 }

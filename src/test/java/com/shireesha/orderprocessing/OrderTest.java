@@ -1,7 +1,5 @@
 package com.shireesha.orderprocessing;
 
-import java.util.Arrays;
-
 import com.shireesha.orderprocessing.Items.Book;
 import com.shireesha.orderprocessing.Items.Video;
 import static java.util.Arrays.asList;
@@ -12,8 +10,8 @@ public class OrderTest {
 
   @Test
   public void shouldContainListOfItems(){
-    ItemInterface book = new Book();
-    ItemInterface video = new Video();
+    Item book = new Book();
+    Item video = new Video();
 
     Order order = new Order(asList(book, video));
     assertEquals(book, order.getItems().get(0));

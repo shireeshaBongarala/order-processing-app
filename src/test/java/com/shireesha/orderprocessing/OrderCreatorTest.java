@@ -19,7 +19,7 @@ public class OrderCreatorTest {
     );
     Order actualOrder = orderCreator.createOrder(stringList);
 
-    List<ItemInterface> items = Arrays.asList(
+    List<Item> items = Arrays.asList(
        new Book(), new Video()
     );
     Order expectedOrder = new Order(items);
