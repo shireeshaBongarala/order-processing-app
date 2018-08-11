@@ -2,6 +2,9 @@ package com.shireesha.orderprocessing;
 
 import java.util.List;
 
+import lombok.Value;
+
+@Value
 class Order {
   private List<Item> items;
 

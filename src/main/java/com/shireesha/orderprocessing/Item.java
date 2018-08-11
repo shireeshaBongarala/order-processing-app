@@ -4,7 +4,9 @@ import java.util.Collections;
 import java.util.List;
 
 import static java.util.Arrays.asList;
+import lombok.Value;
 
+@Value
 class Item {
   private String name;
 

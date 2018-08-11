@@ -20,6 +20,11 @@ public class App {
       System.out.println("Cannot have more than one membership request per order");
     }
 
+    OrderCreator orderCreator = new OrderCreator();
+    Order order = orderCreator.createOrder(inputList);
+    for(Item item:order.getItems()){
+      System.out.println(item.getActions());
+    }
 
   }
 }
