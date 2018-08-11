@@ -13,4 +13,9 @@ public class Video implements ItemInterface {
     return asList("generate packing slip",
         "generate video certificate");
   }
+
+  @Override
+  public String getDisplayName() {
+    return "Video";
+  }
 }

@@ -13,4 +13,9 @@ public class Book implements ItemInterface {
     return asList("generate packing slip",
         "generate commission payment to the agent");
   }
+
+  @Override
+  public String getDisplayName() {
+    return "Book";
+  }
 }
