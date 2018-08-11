@@ -1,13 +1,26 @@
 package com.shireesha.orderprocessing;
 
-public class Item {
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Arrays.asList;
+
+class Item {
   private String name;
 
-  public Item(String name) {
+  Item(String name) {
     this.name = name;
   }
 
-  public String getName() {
+  String getName() {
     return name;
+  }
+
+  List<String> getActions() {
+    if (this.name.equals("Book")) {
+      return asList("generate packing slip",
+          "generate commission payment to the agent");
+    }
+    return Collections.emptyList();
   }
 }
