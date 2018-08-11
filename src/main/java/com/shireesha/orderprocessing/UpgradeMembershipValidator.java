@@ -2,8 +2,10 @@ package com.shireesha.orderprocessing;
 
 import java.util.List;
 
-class UpgradeMembershipValidator {
-  boolean isValid(List<String> inputs) {
+import com.shireesha.orderprocessing.Validators.InputValidator;
+
+public class UpgradeMembershipValidator implements InputValidator {
+  public boolean isValid(List<String> inputs) {
     if (inputs.contains("Upgrade-Membership")) {
       if (!inputs.contains("Membership")) {
         return false;
@@ -15,5 +17,10 @@ class UpgradeMembershipValidator {
       return countOfMembershipRequests <= 1;
     }
     return true;
+  }
+
+  @Override
+  public String getInValidMessage() {
+    return "Upgrade Membership errored";
   }
 }

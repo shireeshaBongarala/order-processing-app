@@ -1,8 +1,12 @@
 package com.shireesha.orderprocessing;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+import com.shireesha.orderprocessing.Validators.InputValidator;
+import com.shireesha.orderprocessing.Validators.MembershipValidator;
 
 public class App {
   public static void main(String[] args) {
@@ -15,9 +19,10 @@ public class App {
       input--;
     }
 
-    MembershipValidator membershipValidator = new MembershipValidator();
-    if (!membershipValidator.isValid(inputList)) {
-      System.out.println("Cannot have more than one membership request per order");
+    List<InputValidator> inputValidators =
+        Arrays.asList(new MembershipValidator(), new UpgradeMembershipValidator());
+    for (InputValidator inputValidator : inputValidators) {
+      inputValidator.isValid(inputList);
     }
 
     OrderCreator orderCreator = new OrderCreator();
