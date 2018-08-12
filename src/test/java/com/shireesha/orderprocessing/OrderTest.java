@@ -1,5 +1,7 @@
 package com.shireesha.orderprocessing;
 
+import com.shireesha.orderprocessing.items.Book;
+import com.shireesha.orderprocessing.items.Video;
 import com.shireesha.orderprocessing.requests.BookRequest;
 import com.shireesha.orderprocessing.requests.VideoRequest;
 import static java.util.Arrays.asList;
@@ -10,12 +12,12 @@ public class OrderTest {
 
   @Test
   public void shouldContainListOfItems(){
-    Request book = new BookRequest();
-    Request video = new VideoRequest();
+    Request bookRequest = new BookRequest(new Book("A", "B"));
+    Request videoRequest = new VideoRequest(new Video("A", "B"));
 
-    Order order = new Order(asList(book, video));
-    assertEquals(book, order.getRequests().get(0));
-    assertEquals(video, order.getRequests().get(1));
+    Order order = new Order(asList(bookRequest, videoRequest));
+    assertEquals(bookRequest, order.getRequests().get(0));
+    assertEquals(videoRequest, order.getRequests().get(1));
   }
 
 }

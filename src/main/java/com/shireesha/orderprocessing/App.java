@@ -28,7 +28,7 @@ public class App {
     OrderCreator orderCreator = new OrderCreator();
     Order order = orderCreator.createOrder(inputList);
     for(Request request :order.getRequests()){
-      System.out.println(request.getActions());
+      request.process();
     }
 
   }
