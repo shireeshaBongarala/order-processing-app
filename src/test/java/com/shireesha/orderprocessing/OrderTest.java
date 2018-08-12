@@ -10,12 +10,12 @@ public class OrderTest {
 
   @Test
   public void shouldContainListOfItems(){
-    Item book = new Book();
-    Item video = new Video();
+    Request book = new Book();
+    Request video = new Video();
 
     Order order = new Order(asList(book, video));
-    assertEquals(book, order.getItems().get(0));
-    assertEquals(video, order.getItems().get(1));
+    assertEquals(book, order.getRequests().get(0));
+    assertEquals(video, order.getRequests().get(1));
   }
 
 }

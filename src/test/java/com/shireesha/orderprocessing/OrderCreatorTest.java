@@ -19,10 +19,10 @@ public class OrderCreatorTest {
     );
     Order actualOrder = orderCreator.createOrder(stringList);
 
-    List<Item> items = Arrays.asList(
+    List<Request> requests = Arrays.asList(
        new Book(), new Video()
     );
-    Order expectedOrder = new Order(items);
+    Order expectedOrder = new Order(requests);
 
     assertEquals(expectedOrder, actualOrder);
   }

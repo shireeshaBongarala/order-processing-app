@@ -6,14 +6,14 @@ import lombok.Value;
 
 @Value
 class Order {
-  private List<Item> items;
+  private List<Request> requests;
 
-  Order(List<Item> items) {
-    this.items = items;
+  Order(List<Request> requests) {
+    this.requests = requests;
   }
 
-  List<Item> getItems() {
-    return items;
+  List<Request> getRequests() {
+    return requests;
   }
 
 }

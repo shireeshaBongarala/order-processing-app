@@ -2,10 +2,12 @@ package com.shireesha.orderprocessing.Items;
 
 import java.util.List;
 
-import com.shireesha.orderprocessing.Item;
+import com.shireesha.orderprocessing.Request;
 import static java.util.Arrays.asList;
+import lombok.Value;
 
-public class Membership implements Item {
+@Value
+public class Membership implements Request {
   @Override
   public List<String> getActions() {
     return asList("create membership");
