@@ -1,4 +1,4 @@
-package com.shireesha.orderprocessing.Items;
+package com.shireesha.orderprocessing.requests;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import static java.util.Arrays.asList;
 import lombok.Value;
 
 @Value
-public class Membership implements Request {
+public class MembershipRequest implements Request {
   @Override
   public List<String> getActions() {
     return asList("create membership");
@@ -15,6 +15,11 @@ public class Membership implements Request {
 
   @Override
   public String getDisplayName() {
-    return "Membership";
+    return "MembershipRequest";
+  }
+
+  @Override
+  public void process() {
+    System.out.println("create membership");
   }
 }

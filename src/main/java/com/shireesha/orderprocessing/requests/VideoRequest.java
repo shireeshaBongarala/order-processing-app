@@ -1,4 +1,4 @@
-package com.shireesha.orderprocessing.Items;
+package com.shireesha.orderprocessing.requests;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import static java.util.Arrays.asList;
 import lombok.Value;
 
 @Value
-public class Video implements Request {
+public class VideoRequest implements Request {
   @Override
   public List<String> getActions() {
     return asList("generate packing slip",
@@ -16,6 +16,12 @@ public class Video implements Request {
 
   @Override
   public String getDisplayName() {
-    return "Video";
+    return "VideoRequest";
+  }
+
+  @Override
+  public void process() {
+    System.out.println("generate packing slip, " +
+        "generate video certificate");
   }
 }

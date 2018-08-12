@@ -1,4 +1,4 @@
-package com.shireesha.orderprocessing.Items;
+package com.shireesha.orderprocessing.requests;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import static java.util.Arrays.asList;
 import lombok.Value;
 
 @Value
-public class Book implements Request {
+public class BookRequest implements Request {
   @Override
   public List<String> getActions() {
     return asList("generate packing slip",
@@ -16,6 +16,12 @@ public class Book implements Request {
 
   @Override
   public String getDisplayName() {
-    return "Book";
+    return "BookRequest";
+  }
+
+  @Override
+  public void process() {
+    System.out.println("Generate packing slip," +
+        " generate commission payment to the agent");
   }
 }

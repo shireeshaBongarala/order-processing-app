@@ -1,19 +1,19 @@
 package com.shireesha.orderprocessing;
 
-import com.shireesha.orderprocessing.Items.Book;
+import com.shireesha.orderprocessing.requests.BookRequest;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-public class BookTest {
+public class BookRequestTest {
 
   @Test
   public void shouldReturnItsActions() {
-    Book book = new Book();
+    BookRequest bookRequest = new BookRequest();
     assertEquals(
         asList("generate packing slip",
             "generate commission payment to the agent"),
-        book.getActions());
+        bookRequest.getActions());
   }
 
 }

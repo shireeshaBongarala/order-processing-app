@@ -1,8 +1,8 @@
 package com.shireesha.orderprocessing;
 
-import com.shireesha.orderprocessing.Items.Book;
-import com.shireesha.orderprocessing.Items.Membership;
-import com.shireesha.orderprocessing.Items.Video;
+import com.shireesha.orderprocessing.requests.BookRequest;
+import com.shireesha.orderprocessing.requests.MembershipRequest;
+import com.shireesha.orderprocessing.requests.VideoRequest;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -10,17 +10,17 @@ public class RequestFactoryTest {
 
   @Test
   public void shouldCreateABookItem() {
-    assertEquals(new Book(), RequestFactory.createRequest("Book"));
+    assertEquals(new BookRequest(), RequestFactory.createRequest("BookRequest"));
   }
 
   @Test
   public void shouldCreateAVideoItem() {
-    assertEquals(new Video(), RequestFactory.createRequest("Video"));
+    assertEquals(new VideoRequest(), RequestFactory.createRequest("VideoRequest"));
   }
 
   @Test
   public void shouldCreateAMembershipItem() {
-    assertEquals(new Membership(), RequestFactory.createRequest("Membership"));
+    assertEquals(new MembershipRequest(), RequestFactory.createRequest("MembershipRequest"));
   }
 
 }

@@ -9,13 +9,13 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
-public class MembershipValidatorTest {
+public class MembershipRequestValidatorTest {
 
   @Test
   public void shouldNotAcceptMoreThanOneMemberShipRequestPerOrder() {
     List<String> inputs = new ArrayList<>();
-    inputs.add("Membership");
-    inputs.add("Membership");
+    inputs.add("MembershipRequest");
+    inputs.add("MembershipRequest");
     MembershipValidator membershipValidator = new MembershipValidator();
     assertFalse(membershipValidator.isValid(inputs));
   }
@@ -23,8 +23,8 @@ public class MembershipValidatorTest {
   @Test
   public void shouldAcceptOneMembershipRequestPerOrder() {
     List<String> inputs = new ArrayList<>();
-    inputs.add("Membership");
-    inputs.add("Book");
+    inputs.add("MembershipRequest");
+    inputs.add("BookRequest");
     MembershipValidator membershipValidator = new MembershipValidator();
     assertTrue(membershipValidator.isValid(inputs));
   }
